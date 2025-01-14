@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>PS Email Signature Generator</title>
+</head>
+<body>
+    <header class="fix-width">
+        <h1>PS Signature Generator</h1>
+        <p>Enter your details in the left form, then copy the generated format and paste it into your email client</p>
+    </header>
+    <div class="fix-width container">
+        <!-- Signature Form -->
+        <div class="left-box">
+            <h3>Signature Details</h3>
+            <form id="signature-form">
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form-field">
+                    <label for="job">Job</label>
+                    <input type="text" id="job">
+                </div>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="form-field">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" pattern="^\+?\d{1,4}[\s\-/\d]*$" placeholder="+1234567890">
+                </div>
+                <button type="submit" id="generate-signature">Generate</button>
+            </form>
+        </div>
+        <!-- Generated Signature -->
+        <div class="right-box">
+            <h3>Generated Signature</h3>
+            <div id="signature-preview">
+
+            </div>
+            <button id="copy-signature" style="display: none;">Copy Signature</button>
+            <h5 id="success-msg" style="display: none; margin: 0; color: green;">Signature copied to clipboard successfully!</h5>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+
+/* Reset */
+*, *::before, *::after{
+    box-sizing: border-box; 
+}
+
+*{
+    margin: 0; 
+    padding: 0; 
+}
+
+ul[role='list'], ol[role='list']{
+    list-style: none; 
+}
+
+html:focus-within{
+    scroll-behavior: smooth; 
+}
+
+a:not([class]){
+    text-decoration-skip-ink: auto; 
+}
+
+input, button, textarea, select{
+    font: inherit; 
+  }
+
+@media (prefers-reduced-motion: reduce){
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        transition: none;
+    }
+}
+
+body, html{
+    height: 100%; 
+    scroll-behavior: smooth; 
+}
+  
+/* Content */
+body { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Roboto", serif;
+    font-size: 1em;
+    padding-bottom: 16px;
+}
+
+h1, h3 {
+    font-weight: 600;
+}
+
+.fix-width {
+    width: 960px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 16px 0;
+    padding: 24px 0;
+    gap: 4px;
+    /* border: 1px solid; */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 16px;
+    max-width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 959px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-box {
+        max-width:none;
+    }
+}
+
+.left-box, .right-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 24px;
+    gap: 24px;
+    border: 1px solid;
+    background-color: #fafafa36;
+}
+
+.left-box {
+    max-width: 350px;
+    max-height: fit-content;
+}
+
+.right-box {
+    min-height: 397px;
+    max-height: fit-content;
+}
+
+label {
+    font-size: 	0.7500em;
+    color: grey;
+}
+
+input {
+    padding: 8px;
+    font-size: 0.8750em	;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #0040E4;
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0339C2;
+}
+
+#signature-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    gap: 12px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+button#copy-signature {
+    background-color: #F0F0F0;
+    color: black;
+}
+
+@media only screen and (max-width: 959px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-box {
+        max-width:none;
+    }
+}
