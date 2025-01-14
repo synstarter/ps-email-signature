@@ -18,10 +18,10 @@ document.getElementById("signature-form").addEventListener("submit", function(ev
     // Generate the signature HTML for display (with styling and links)
     let signatureHtml = `
         <div style="font-family: Arial, Helvetica, sans-serif;">
-            <strong style= "margin: 0; padding: 0; font-size: 12pt;">Mostafa Hawary</strong>
-            <p style= "margin: 0; padding: 0; font-size: 11pt;">Designer</p>
-            <p style="margin: 0; padding: 0; color: #0563c1; text-decoration: none; font-size: 11pt;"><a href="mailto:${email}">test@test.com</a></p>
-            <p style="margin: 0; padding: 0; color: #0563c1; text-decoration: none; font-size: 11pt;"><a href="tel:${phone}">464564654</a></p>
+            <strong style= "margin: 0; padding: 0; font-size: 12pt;">${name}</strong>
+            <p style= "margin: 0; padding: 0; font-size: 11pt;">${job}</p>
+            <p style="margin: 0; padding: 0; color: #0563c1; text-decoration: none; font-size: 11pt;"><a href="mailto:${email}">${email}</a></p>
+            <p style="margin: 0; padding: 0; color: #0563c1; text-decoration: none; font-size: 11pt;"><a href="tel:${phone}">${phone}</a></p>
             <p style="margin: 0; padding: 0; color: #0563c1; text-decoration: none; font-size: 11pt;"><a href="https://pricespider.com" target="_blank">www.pricespider.com</a></p><br>
             <img src="https://raw.githubusercontent.com/synstarter/ps-email-signature/refs/heads/main/imgs/logo.png" alt="Company Logo" width="236" height="auto" style="margin: 0; padding: 0;">
             <p style= "margin: 0; padding: 0;">
